@@ -1,0 +1,63 @@
+#centerDiv {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -250px;
+    width: 500px;
+    height: 500px;
+}​
+.button-container {
+    margin-top: 20px; /* Adjust as needed */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 300px; /* Set a fixed height for the container */
+}
+.button-container button {
+    margin-right: 50px; /* Adjust as needed */
+    margin-left: 50px;
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    padding: 10px 20px; /* Adjust padding as needed */
+    
+}
+
+.video-container {
+    margin-top: 50px; /* Adjust as needed */
+    float: right; /* Send the container to the right */
+    margin-left: 20px; /* Optional: Add some space between the video container and other content */
+}
+.video-container video {
+    position: absolute;
+    margin-left: -700px;
+    width: 960; /* Adjust width as needed */
+    height: 540; /* Adjust height as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.image-container {
+    width: 50%; /* Adjust width as needed */
+    /* position: absolute; */
+    margin-left: 130px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 350px; /* Set a fixed height for the container */
+}
+.image-container img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-container-wolf {
+    width: 200px; /* Desired width of the cropped image */
+    height: 500px; /* Desired height of the cropped image */
+    overflow: hidden; /* Hide the overflow */
+    border: 1px solid #ccc; /* Optional: Add a border */
+}
+.cropped-image {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}

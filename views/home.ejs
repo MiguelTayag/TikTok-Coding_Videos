@@ -1,0 +1,70 @@
+<%- include("partials/header.ejs") %>
+<div class="video-container">
+    <video height="800" controls autoplay>
+        <source src="/images/neyo.mp4" type="video/mp4">
+        <!-- Add additional source tags for other video formats if needed -->
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div style="margin-bottom: -300px;">
+    <img src="/images/wolf.gif" alt="Description of the GIF" style="height: 400px">
+    <img src="/images/wolf.gif" alt="Description of the GIF" style="height: 600px">
+    <img src="/images/wolf.gif" alt="Description of the GIF" style="height: 400px">
+</div>
+<img src="/images/leroy.gif" alt="Description of the GIF" style="height: 800px">
+<div id='centerDiv'>
+    <div class="image-container">
+        <img src="images/cat holding flowers.jpg" alt="Description of the image">
+    </div>
+    <div style="text-align: center;">
+        <h2>Will you hire me POOKIE?!?!?!<h2>
+    </div>
+    <br>
+    <div class="button-container" style="text-align: center;">
+    <form action="/success" method="get">
+        <button id="yesButton" type="submit" class="btn btn-success">YES</button>
+    </form>
+        <button id="noButton" type="button" class="btn btn-danger">NO</button>
+
+        <script>
+            var counter = 10;
+            // Get the button element
+            var noButton = document.getElementById('noButton');
+            var yesButton = document.getElementById('yesButton');
+            function makeButtonSmaller() {
+                var currentWidth = noButton.offsetWidth; // Get current width
+                var currentHeight = noButton.offsetHeight; // Get current height
+                var newWidth = currentWidth * 0.9; // Reduce width by 10%
+                var newHeight = currentHeight * 0.9; // Reduce height by 10%
+                noButton.style.width = newWidth + 'px'; // Update width
+                noButton.style.height = newHeight + 'px'; // Update height
+            }
+            function makeButtonBigger() {
+                var currentWidth = yesButton.offsetWidth; // Get current width
+                var currentHeight = yesButton.offsetHeight; // Get current height
+                var newWidth = currentWidth * 1.1; // Reduce width by 10%
+                var newHeight = currentHeight * 1.1; // Reduce height by 10%
+                yesButton.style.width = newWidth + 'px'; // Update width
+                yesButton.style.height = newHeight + 'px'; // Update height
+            }
+            // Add event listener for the click event
+            noButton.addEventListener('click', function() {
+                makeButtonSmaller();
+                makeButtonBigger();
+                counter--;
+                console.log(counter);
+                if(counter == 0){
+                    noButton.remove();
+                }
+                // You can add your logic here for what should happen when the button is pressed
+                // For example, you can send a request to the server using AJAX or modify the DOM
+            });
+
+            yesButton.addEventListener('click', function() {
+                noButton.remove();
+            });
+        </script>
+    </div>
+</div>
+<%- include("partials/footer.ejs") %>
